@@ -89,16 +89,13 @@ public class BasicLambdas {
     }
 
     private static void sortName(List<Person> personList){
-        //personList.sort(Comparator.comparing(Person::getName));
-        personList.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+        personList.sort(Comparator.comparing(Person::getName));
     }
     private static void sortAge(List<Person> personList){
-        //personList.sort(Comparator.comparingInt(Person::getAge));
-        personList.sort((o1, o2) -> Integer.compare(o1.getAge(), o2.getAge()));
+        personList.sort(Comparator.comparingInt(Person::getAge));
     }
     private static void sortHeight(List<Person> personList){
-        //personList.sort(Comparator.comparingDouble(Person::getHeight));
-        personList.sort((o1, o2) -> Double.compare(o1.getHeight(), o2.getHeight()));
+        personList.sort(Comparator.comparingDouble(Person::getHeight));
     }
     private static List<Person> getPeople() {
         List<Person> result = new ArrayList<>();
