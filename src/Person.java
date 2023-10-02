@@ -15,9 +15,18 @@ public class Person {
         return height;
     }
 
-    public Person(Integer age, String name, Double height) {
+    public Person(String name, Integer age, Double height) {
         this.age = age;
         this.name = name;
         this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                ", height=" + height +
+                '}';
     }
 }
